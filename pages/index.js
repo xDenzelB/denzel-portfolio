@@ -15,9 +15,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className='bg-white px-10 md:px-20 lg:px-40'>
+      <main className='bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-200'>
         <section className=' bg-sky-500 min-h-screen dark:bg-gray-500'>
-          <nav className='py-10 mb-12 flex justify-between dark:text-white'>
+          <nav className='py-10 mb-12 flex justify-evenly dark:text-white dark:bg-gray-400 bg-sky-200 rounded-full border-8'>
             <h1 className='text-xl font-burtons'>Denzel Bartolaba</h1>
             <ul className='flex items-center'>
               <li>
@@ -28,12 +28,12 @@ export default function Home() {
           </nav>
           <div className='text-center p-10'>
             <h2 className='text-5xl py-2 text-teal-200 font-medium md:text-6xl'>Hello world, I'm Denzel Bartolaba</h2>
-            <h2 className='text-2xl py-2'>(He/Him)</h2>
-            <h3 className='text-2xl py-2 md:text-3xl'>Software Developer.</h3>
-            <p className='text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto'>
+            <h2 className='text-2xl py-2 dark:text-white'>(He/Him)</h2>
+            <h3 className='text-2xl py-2 md:text-3xl dark:text-white'>Software Developer.</h3>
+            <p className='text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto dark:text-white'>
               A Filipino-American first generation frontend developer based in Vancouver, Washington.
             </p>
-            <div className='text-5xl flex justify-center gap-16 py-3 text-gray-700'>
+            <div className='text-5xl flex justify-center gap-16 py-3 text-gray-700 dark:text-white'>
               <AiFillLinkedin />
               <AiFillGithub />
             </div>
