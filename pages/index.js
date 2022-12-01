@@ -4,12 +4,20 @@ import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
 import Avatar from '../public/Avatar.jpg'
 import Image from 'next/image'
 import { useRef, useState } from 'react';
-import Link from 'next/link';
-import Dark from '../public/Dark.jpg'
+import Dark from '../public/Dark.jpg';
+import CLIC from '../public/CLIC.png';
+import Cooks from '../public/Cooks.png';
+import Thoughts from '../public/Thoughts.png';
 // import { motion, useScroll } from 'framer-motion';
 
 export default function Home() {
+  const myRef = useRef(null);
   const [darkMode, setDarkMode] = useState(false);
+
+  const executeScroll = () => {
+    myRef.current.scrollIntoView({ behavior: 'smooth' });
+  }
+
 
   return (
     <div className={darkMode ? 'dark' : ''}>
@@ -20,13 +28,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className='bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-600'>
+      <main className=' bg-gray-300 px-10 md:px-20 lg:px-40 dark:bg-gray-600'>
         <section className=' min-h-screen dark:bg-gray-600'>
           <nav className='py-10 mb-12 flex justify-between border-b-4 dark:text-white'>
             <h1 className='text-xl'>
               <Image className=' w-40 rounded-full' src={Dark} />
             </h1>
-            <Link className=' py-20' href='#about-section'>About</Link>
+            <h2 className='py-20 cursor-pointer' onClick={executeScroll}>About</h2>
+            <h2 className='py-20 cursor-pointer' onClick={executeScroll}>Projects</h2>
+            <h2 className='py-20 cursor-pointer' onClick={executeScroll}>Contact</h2>
             <ul className='flex items-center'>
               <li>
                 <BsFillMoonStarsFill className='cursor-pointer text-xl' onClick={() => setDarkMode(!darkMode)} />
@@ -35,7 +45,7 @@ export default function Home() {
             </ul>
           </nav>
           <div className='text-center p-10'>
-            <h2 className='text-5xl py-2 text-teal-200 font-medium md:text-6xl'>Hello world, I'm Denzel Bartolaba</h2>
+            <h2 className='text-5xl py-2 text-teal-400 font-medium md:text-6xl'>Hello world, I'm Denzel Bartolaba</h2>
             <h2 className='text-2xl py-2 dark:text-white'>(He/Him)</h2>
             <h3 className='text-2xl py-2 md:text-3xl dark:text-white'>Software Developer.</h3>
             <p className='text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto dark:text-white'>
@@ -50,42 +60,34 @@ export default function Home() {
               </a>
 
             </div>
-            <div className='mx-auto rounded-full w-80 h-80 overflow-hidden mt-20 md:h-96 md:w-96'>
+            <div className='mx-auto rounded-full w-75 h-75 overflow-hidden mt-20 md:h-96 md:w-96'>
               <Image src={Avatar} />
             </div>
           </div>
         </section>
-        <section id='about-section'>
+        <section ref={myRef}>
           <div>
-            <h3 className='text-3xl py-1 dark:text-gray-200'>About Denzel Bartolaba</h3>
+            <h3 className='text-3xl py-1 dark:text-gray-200'>About Me</h3>
             <p className='text-md py-2 leading-8 text-gray-800 dark:text-white'>
               If you're reading this, thanks for coming to my page. My name is Denzel Bartolaba and I am a
-              junior front-end developer seeking my first position. What I enjoy most about being a developer
+              junior front-end developer seeking my first position. What I enjoy most about being a developer is
               overcoming the challenges that are given when a new problem arrives, theres always something so satisfying when it
               comes to debugging mine or someone elses code it's what keeps me going as a developer. I started my journey back in
               2018 when I dabbled in python. After a couple years of youtube, khan academy, and free code camp I decided to expand my
               knowledge and join Alchemy Code Lab where I was able to learn different languages like <span className='text-teal-500'>HTML/CSS, Javascript, React, Express, Node,
                 PostgreSQL, and build full stack applications.</span> Making the switch to becoming a developer has been a life changing experience
-              and I love everything that I get to do. As of right now I have 3 personal goals
+              and I love everything that I get to do.
             </p>
-            <ol className='text-md py-2 leading-8 text-gray-800 dark:text-white'>
-              <li type='1'>
-                To get my first software development job, so I can learn as much as possible
-                and improve my skills as a developer to ensure growth within a company.
-              </li>
-              <li type='1'>
-                Launch an application that solves real world problems on Android & Apple Store.
-              </li>
-              <li type='1'>
-                Become a leader and mentor to help someone on their tech journey.
-              </li>
-            </ol>
-          </div>
-          <div>
-            <div>
 
-            </div>
           </div>
+          <section ref={myRef}>
+            <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap'>
+              <h1 className='text-3xl py-2 dark:text-white'>Projects</h1>
+            </div>
+            <div>
+              Something
+            </div>
+          </section>
         </section>
       </main>
 
