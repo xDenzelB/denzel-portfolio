@@ -80,16 +80,57 @@ export default function Home() {
             </p>
 
           </div>
-          <h1 className='text-3xl py-2 dark:text-white'>Projects</h1>
-          <div id='projects' className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap'>
-            <div className='basis-1/3 flex-1'>
-              <Image className='rounded-lg object-cover w-32 h-32' layout='responsive' src={Thoughts} />
-            </div>
-            <div className='basis-1/3 flex-1'>
-              <Image className='rounded-lg object-scale-down w-32 h-32' layout='responsive' src={Cooks} />
-            </div>
-            <div className='basis-1/3 flex-1'>
-              <Image className='rounded-lg  object-cover w-32 h-32' layout='responsive' src={CLIC} />
+          <div className='container mx-auto'>
+            <h1 className='text-3xl py-2 dark:text-white'>Projects</h1>
+            <div id='projects' className='grid grid-cols-3 gap-4'>
+              <div className='max-w-sm rounded overflow-hidden shadow-lg'>
+                <Image className='w-full hover:animate-pulse' layout='responsive' src={Thoughts} />
+                <div className='px-6 py-4 dark:bg-gray-400'>
+                  <div className='text-5xl flex justify-center gap-16 py-3 dark:text-gray-200'>
+                    Thoughts List
+                  </div>
+                  <div className='text-5xl flex justify-center gap-16 py-3 text-gray-700 dark:text-white'>
+                    <a className='cursor-pointer'>
+                      <AiFillGithub />
+                    </a>
+                  </div>
+                  <p>
+
+                  </p>
+                </div>
+              </div>
+              <div className='max-w-sm rounded overflow-hidden shadow-lg'>
+                <Image className='w-full hover:animate-pulse' layout='responsive' src={Cooks} />
+                <div className='px-6 py-4 dark:bg-gray-400'>
+                  <div className='text-5xl flex justify-center gap-16 py-3 dark:text-gray-200'>
+                    Cooks Books
+                  </div>
+                  <div className='text-5xl flex justify-center gap-16 py-3 text-gray-700 dark:text-white'>
+                    <a className='cursor-pointer'>
+                      <AiFillGithub />
+                    </a>
+                  </div>
+                  <p>
+                    CooksBooks is your online resource for reconnecting to all the delicious recipes you've cooked from the cook books that you own. You may even find new books to explore!
+                  </p>
+                </div>
+              </div>
+              <div className='max-w-sm rounded overflow-hidden shadow-lg'>
+                <Image className='w-full hover:animate-pulse' layout='responsive' src={CLIC} />
+                <div className='px-6 py-4 dark:bg-gray-400'>
+                  <div className='text-5xl flex justify-center gap-16 py-3 text-gray-700 dark:text-gray-200'>
+                    CLIC
+                  </div>
+                  <div className='text-5xl flex justify-center gap-16 py-3 text-gray-700 dark:text-gray-200'>
+                    <a className='cursor-pointer'>
+                      <AiFillGithub />
+                    </a>
+                  </div>
+                  <p>
+                    CLIC utilizes a visually pleasing terminal to create a real time chat app where users can message one another and execute a variety of slash commands to display emoticons, hit 3rd party APIs, or encode/decode their messages. To install and run use the following commands: npm i @csjknapp/clic-c
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
