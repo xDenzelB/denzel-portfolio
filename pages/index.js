@@ -34,8 +34,8 @@ export default function Home() {
             <h1 className='text-xl'>
               <Image className=' w-40 rounded-full' src={Dark} />
             </h1>
-            <h2 className='py-20 cursor-pointer' onClick={executeScroll}>About</h2>
-            <h2 className='py-20 cursor-pointer' onClick={executeScroll}>Projects</h2>
+            <h2 className='py-20 cursor-pointer' href='about' onClick={executeScroll}>About</h2>
+            <h2 className='py-20 cursor-pointer' href='projects' onClick={executeScroll}>Projects</h2>
             <h2 className='py-20 cursor-pointer' onClick={executeScroll}>Contact</h2>
             <ul className='flex items-center'>
               <li>
@@ -65,7 +65,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section ref={myRef}>
+        <section id='about' ref={myRef}>
           <div>
             <h3 className='text-3xl py-1 dark:text-gray-200'>About Me</h3>
             <p className='text-md py-2 leading-8 text-gray-800 dark:text-white'>
@@ -80,14 +80,18 @@ export default function Home() {
             </p>
 
           </div>
-          <section ref={myRef}>
-            <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap'>
-              <h1 className='text-3xl py-2 dark:text-white'>Projects</h1>
+          <h1 className='text-3xl py-2 dark:text-white'>Projects</h1>
+          <div id='projects' className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap'>
+            <div className='basis-1/3 flex-1'>
+              <Image className='rounded-lg object-cover w-32 h-32' layout='responsive' src={Thoughts} />
             </div>
-            <div>
-              Something
+            <div className='basis-1/3 flex-1'>
+              <Image className='rounded-lg object-scale-down w-32 h-32' layout='responsive' src={Cooks} />
             </div>
-          </section>
+            <div className='basis-1/3 flex-1'>
+              <Image className='rounded-lg  object-cover w-32 h-32' layout='responsive' src={CLIC} />
+            </div>
+          </div>
         </section>
       </main>
 
