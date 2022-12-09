@@ -8,14 +8,19 @@ import Dark from '../public/Dark.jpg';
 import CLIC from '../public/CLIC.png';
 import Cooks from '../public/Cooks.png';
 import Thoughts from '../public/Thoughts.png';
-// import { motion, useScroll } from 'framer-motion';
+import { HiLink } from 'react-icons/hi2';
 
 export default function Home() {
-  const myRef = useRef(null);
+  const aboutRef = useRef(null);
+  const projectRef = useRef(null);
   const [darkMode, setDarkMode] = useState(false);
 
-  const executeScroll = () => {
-    myRef.current.scrollIntoView({ behavior: 'smooth' });
+  const executeAboutScroll = () => {
+    aboutRef.current.scrollIntoView({ behavior: 'smooth' });
+
+  }
+  const executeProjectScroll = () => {
+    projectRef.current.scrollIntoView({ behavior: 'smooth' });
   }
 
 
@@ -34,14 +39,19 @@ export default function Home() {
             <h1 className='text-xl'>
               <Image className=' w-40 rounded-full' src={Dark} />
             </h1>
-            <h2 className='py-20 cursor-pointer' href='about' onClick={executeScroll}>About</h2>
-            <h2 className='py-20 cursor-pointer' href='projects' onClick={executeScroll}>Projects</h2>
-            <h2 className='py-20 cursor-pointer' onClick={executeScroll}>Contact</h2>
+            <h2 className='py-20 cursor-pointer hover:animate-ping' href='about' onClick={executeAboutScroll}>About</h2>
+            <h2 className='py-20 cursor-pointer hover:animate-ping' href='projects' onClick={executeProjectScroll}>Projects</h2>
+            <h2 className='py-20 cursor-pointer hover:animate-ping'>
+              <a href='mailto: dbartolaba123@gmail.com'>
+                Let's Connect
+              </a>
+
+            </h2>
             <ul className='flex items-center'>
               <li>
                 <BsFillMoonStarsFill className='cursor-pointer text-xl' onClick={() => setDarkMode(!darkMode)} />
               </li>
-              <li><a className='bg-gradient-to-r from-cyan-400 to-teal-400 text-white px-4 py-2 rounded-md ml-8' href='#'>Resume</a></li>
+              <li><a className='bg-gradient-to-r from-cyan-400 to-teal-400 text-white px-4 py-2 rounded-md ml-8 hover:animate-ping' href='https://www.canva.com/design/DAFRgxAOVkY/xw6zvTQM-cTLj1py-HeIGw/view?utm_content=DAFRgxAOVkY&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink'>Resume</a></li>
             </ul>
           </nav>
           <div className='text-center p-10'>
@@ -52,10 +62,10 @@ export default function Home() {
               A Filipino-American first generation frontend developer based in Vancouver, Washington.
             </p>
             <div className='text-5xl flex justify-center gap-16 py-3 text-gray-700 dark:text-white'>
-              <a className='cursor-pointer' href='https://www.linkedin.com/in/denzel-bartolaba-45a322b5/'>
+              <a className='cursor-pointer hover:animate-bounce' href='https://www.linkedin.com/in/denzel-bartolaba-45a322b5/'>
                 <AiFillLinkedin />
               </a>
-              <a className='cursor-pointer' href='https://github.com/xDenzelB'>
+              <a className='cursor-pointer hover:animate-bounce' href='https://github.com/xDenzelB'>
                 <AiFillGithub />
               </a>
 
@@ -65,7 +75,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id='about' ref={myRef}>
+        <section ref={aboutRef}>
           <div>
             <h3 className='text-3xl py-1 dark:text-gray-200'>About Me</h3>
             <p className='text-md py-2 leading-8 text-gray-800 dark:text-white'>
@@ -80,7 +90,7 @@ export default function Home() {
             </p>
 
           </div>
-          <div className='container mx-auto'>
+          <div className='container mx-auto' ref={projectRef}>
             <h1 className='text-3xl py-2 dark:text-white'>Projects</h1>
             <div id='projects' className='grid grid-cols-3 gap-4'>
               <div className='max-w-sm rounded overflow-hidden shadow-lg'>
@@ -89,12 +99,17 @@ export default function Home() {
                   <div className='text-5xl flex justify-center gap-16 py-3 dark:text-gray-200'>
                     Thoughts List
                   </div>
-                  <div className='text-5xl flex justify-center gap-16 py-3 text-gray-700 dark:text-white'>
-                    <a className='cursor-pointer'>
+                  <div className='text-md text-5xl flex justify-center gap-16 py-3 text-gray-700 dark:text-white'>
+                    <a className='cursor-pointer hover:animate-bounce' href='https://github.com/xDenzelB/thoughts-list'>
                       <AiFillGithub />
                     </a>
+                    <a className='cursor-pointer hover:animate-bounce' href='zingy-conkies-81e555.netlify.app/'>
+                      <HiLink />
+                    </a>
                   </div>
-                  <p>
+                  <p className='text-md py-2 leading-8'>
+                    Thought's List is the perfect way to get your thoughts and manifestations to come to life!
+                    Utilizing Next.JS, CSS Tailwind, and Firebase, you can connect, read, post, and comment on the dashboard and gets updated in real time!
 
                   </p>
                 </div>
@@ -105,29 +120,35 @@ export default function Home() {
                   <div className='text-5xl flex justify-center gap-16 py-3 dark:text-gray-200'>
                     Cooks Books
                   </div>
-                  <div className='text-5xl flex justify-center gap-16 py-3 text-gray-700 dark:text-white'>
-                    <a className='cursor-pointer'>
+                  <div className='text-md text-5xl flex justify-center gap-16 py-3 text-gray-700 dark:text-white'>
+                    <a className='cursor-pointer hover:animate-bounce' href='https://github.com/cookin-n-bookin'>
                       <AiFillGithub />
                     </a>
+                    <a className='cursor-pointer hover:animate-bounce' href='cooksbooks.netlify.app/books'>
+                      <HiLink />
+                    </a>
                   </div>
-                  <p>
+                  <p className='text-md py-2 leading-8'>
                     CooksBooks is your online resource for reconnecting to all the delicious recipes you've cooked from the cook books that you own. You may even find new books to explore!
                   </p>
                 </div>
               </div>
               <div className='max-w-sm rounded overflow-hidden shadow-lg'>
                 <Image className='w-full hover:animate-pulse' layout='responsive' src={CLIC} />
-                <div className='px-6 py-4 dark:bg-gray-400'>
+                <div className='px-6 py-4 dark:bg-gray-400 dark:opacity-0.5'>
                   <div className='text-5xl flex justify-center gap-16 py-3 text-gray-700 dark:text-gray-200'>
                     CLIC
                   </div>
-                  <div className='text-5xl flex justify-center gap-16 py-3 text-gray-700 dark:text-gray-200'>
-                    <a className='cursor-pointer'>
+                  <div className=' text-md text-5xl flex justify-center gap-16 py-3 text-gray-700 dark:text-gray-200'>
+                    <a className='cursor-pointer hover:animate-bounce' href='https://github.com/C-L-I-C/CLIC'>
                       <AiFillGithub />
                     </a>
+                    <a className='cursor-pointer hover:animate-bounce' href='https://www.npmjs.com/package/@csjknapp/clic-client'>
+                      <HiLink />
+                    </a>
                   </div>
-                  <p>
-                    CLIC utilizes a visually pleasing terminal to create a real time chat app where users can message one another and execute a variety of slash commands to display emoticons, hit 3rd party APIs, or encode/decode their messages. To install and run use the following commands: npm i @csjknapp/clic-c
+                  <p className='text-md py-2 leading-8'>
+                    CLIC utilizes a visually pleasing terminal to create a real time chat app where users can message one another and execute a variety of slash commands to display emoticons, hit 3rd party APIs, or encode/decode their messages. To install and run use the following commands: npm i @csjknapp/clic-c (If someone wants to see a live demo please DM me!)
                   </p>
                 </div>
               </div>
