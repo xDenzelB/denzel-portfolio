@@ -43,7 +43,7 @@ export default function Home() {
             <h2 className='py-20 cursor-pointer hover:animate-ping' href='projects' onClick={executeProjectScroll}>Projects</h2>
             <h2 className='py-20 cursor-pointer hover:animate-ping'>
               <a href='mailto: dbartolaba123@gmail.com'>
-                Let's Connect
+                Let&apos;s Connect
               </a>
 
             </h2>
@@ -55,7 +55,7 @@ export default function Home() {
             </ul>
           </nav>
           <div className='text-center p-10'>
-            <h2 className='text-5xl py-2 text-teal-400 font-medium md:text-6xl'>Hello world, I'm Denzel Bartolaba</h2>
+            <h2 className='text-5xl py-2 text-teal-400 font-medium md:text-6xl'>Hello world, I&apos;m Denzel Bartolaba</h2>
             <h2 className='text-2xl py-2 dark:text-white'>(He/Him)</h2>
             <h3 className='text-2xl py-2 md:text-3xl dark:text-white'>Software Developer.</h3>
             <p className='text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto dark:text-white'>
@@ -79,10 +79,10 @@ export default function Home() {
           <div>
             <h3 className='text-3xl py-1 dark:text-gray-200'>About Me</h3>
             <p className='text-md py-2 leading-8 text-gray-800 dark:text-white'>
-              If you're reading this, thanks for coming to my page. My name is Denzel Bartolaba and I am a
+              If you&apos;re reading this, thanks for coming to my page. My name is Denzel Bartolaba and I am a
               junior front-end developer seeking my first position. What I enjoy most about being a developer is
               overcoming the challenges that are given when a new problem arrives, theres always something so satisfying when it
-              comes to debugging mine or someone elses code it's what keeps me going as a developer. I started my journey back in
+              comes to debugging mine or someone elses code it&apos;s what keeps me going as a developer. I started my journey back in
               2018 when I dabbled in python. After a couple years of youtube, khan academy, and free code camp I decided to expand my
               knowledge and join Alchemy Code Lab where I was able to learn different languages like <span className='text-teal-500'>HTML/CSS, Javascript, React, Express, Node,
                 PostgreSQL, and build full stack applications.</span> Making the switch to becoming a developer has been a life changing experience
@@ -108,7 +108,7 @@ export default function Home() {
                     </a>
                   </div>
                   <p className='text-md py-2 leading-8'>
-                    Thought's List is the perfect way to get your thoughts and manifestations to come to life!
+                    Thought&apos;s List is the perfect way to get your thoughts and manifestations to come to life!
                     Utilizing Next.JS, CSS Tailwind, and Firebase, you can connect, read, post, and comment on the dashboard and gets updated in real time!
 
                   </p>
@@ -129,7 +129,7 @@ export default function Home() {
                     </a>
                   </div>
                   <p className='text-md py-2 leading-8'>
-                    CooksBooks is your online resource for reconnecting to all the delicious recipes you've cooked from the cook books that you own. You may even find new books to explore!
+                    CooksBooks is your online resource for reconnecting to all the delicious recipes you&apos;ve cooked from the cook books that you own. You may even find new books to explore!
                   </p>
                 </div>
               </div>
